@@ -1,0 +1,907 @@
+<html lang="en">
+<head>
+  <title>Album</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style1.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<style media="screen">
+<main>
+  <nav class="floating-menu">
+  </nav>
+</main>
+body{
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+/*.gallery*/
+.gallery{
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  background-color: #2a2932;
+  padding: 100px 0;
+}
+.gallery .gallery-filter{
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.gallery .gallery-filter .filter-item{
+  color: #ffffff;
+  font-size: 17px;
+  border: 2px solid white;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+  color: white;
+  border-color : #16b5ef;
+  background: #16b5ef;
+}
+.gallery .gallery-item{
+  width: calc(100% / 3);
+  padding: 15px;
+
+}
+.gallery .gallery-item-inner img{
+  width: 100%;
+  border: 3px solid #d4dad9;
+}
+.gallery .gallery-item.show{
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.gallery .gallery-item.hide{
+  display: none;
+}
+
+/*responsive*/
+@media(max-width: 491px){
+  .gallery .gallery-item{
+    width: 50%;
+  }
+}
+@media(max-width: 467px){
+    .gallery .gallery-item{
+    width: 100%;
+  }
+  .gallery .gallery-filter .filter-item{
+    margin-bottom: 10px;
+  }
+}
+
+.main {
+    margin-bottom: 200%;
+  }
+
+  .floating-menu {
+    font-family: sans-serif;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+  }
+
+  .floating-menu a, 
+  .floating-menu h3 {
+    font-size: 0.9em;
+    display: block;
+    margin: 0 0.5em;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+<nav class="floating-menu">
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+         <ul>
+		 <li class="logo"><b>PHOTO CAST</b></li>
+            <li><a href=file:///C:/HCI%20PROJECT/online%20code/homepage.html>Home</a></li>
+            <li><a href=file:///C:/HCI%20PROJECT/online%20code/aboutpage.html>About</a></li>
+            <li><a href=file:///C:/HCI%20PROJECT/online%20code/albumpage.html>Albums</a><li>
+            <li><a href=file:///C:/HCI%20PROJECT/online%20code/uploadpage.html>Upload</a><li>
+            <li><a href=file:///C:/HCI%20PROJECT/online%20code/downloadimage.html>Downloads</a></li>
+			<li><a href=file:///C:/HCI%20PROJECT/online%20code/imageresizer.html>Resize and compress</a></li>
+			<li><a href=file:///C:/HCI%20PROJECT/online%20code/contactform.html>Contact</a></li>
+			<li class="item button"><a href=file:///C:/HCI%20PROJECT/online%20code/loginandsignupform.html>Log In</a></li>
+         </ul>
+      </div>
+	  </nav>
+</body>
+</html>
+<section class="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="gallery-filter">
+        <span class="filter-item active" data-filter="all">all</span>
+        <span class="filter-item" data-filter="watch">Watch</span>
+        <span class="filter-item" data-filter="headphone">headphone</span>
+        <span class="filter-item" data-filter="camera">camera</span>
+        <span class="filter-item" data-filter="phone">Phone</span>
+		<span class="filter-item" data-filter="3D">3D</span>
+		<span class="filter-item" data-filter="college">colleges</span>
+		<span class="filter-item" data-filter="logos">Logos</span>
+		<span class="filter-item" data-filter="shoe">shoes</span>
+		<span class="filter-item" data-filter="hand">3D Hand Emojis</span>
+      </div>
+    </div>
+    <div class="row">
+      <!-- gallery item start -->
+      <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-QvLveiaH3VI/YS_C1lXw6-I/AAAAAAAACa0/1hIbUlfQUQ8ew--PZ8IYB_55WFYTX8OtQCNcBGAsYHQ/s0/shoe-1.jpg" alt="shoe">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1465877783223-4eba513e27c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1600054904350-1d493ae5f922?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1605408499391-6368c628ef42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1628253747716-0c4f5c90fdda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  
+	 <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1616406432452-07bc5938759d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODF8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe" height="500px" width="500px">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTF8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+	  <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTJ8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="shoe">
+        </div>
+      </div>
+      <!-- gallery item start -->
+      <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-T3KmNJ1-wYw/YS_E3rHDRII/AAAAAAAACb4/_DVj1_wL7eUZzJ45z9RQS5JG1orI_VlvACNcBGAsYHQ/s0/headphone-1.jpg" alt="headphone">
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-I4zq8AEp_jY/YS_C3MiTUqI/AAAAAAAACa8/GjRpPmI0eqE_g52nIv7gUrh_9AGQbQkoACNcBGAsYHQ/s0/camera-1.jpg" alt="camera">
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGVhZHBob25lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aGVhZHBob25lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1491927570842-0261e477d937?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1505740106531-4243f3831c78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1497381446305-7445b7d4d5cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1575975243243-5462a2054ed2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1629317480860-3265288e62a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+	  <div class="gallery-item headphone">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1567928513899-997d98489fbd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fGhlYWRwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="headphone">
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/--7JZU9HynIU/YS_DH53WPiI/AAAAAAAACbY/ivcZm6OVbTgSfc9JWX1OE4WwKmvhcY07wCNcBGAsYHQ/s0/camera-2.jpg" alt="camera">
+        </div>
+      </div>
+      <!-- gallery item end -->
+            <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://1.bp.blogspot.com/-wX4lusii0OE/YS_DC2BpADI/AAAAAAAACbA/tTGcB7QUQnshvW8hbEtf1-Nnj6dl3wSzgCNcBGAsYHQ/s0/phone-1.jpg" alt="phone">
+              </div>
+            </div>
+		      <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://images.unsplash.com/photo-1613813602146-dd98b7bcdb3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODh8fHBob25lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="phone">
+              </div>
+            </div>
+			      <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://images.unsplash.com/photo-1544866092-1935c5ef2a8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fHBob25lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="phone">
+              </div>
+            </div>
+			      <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://images.unsplash.com/photo-1620146096106-8e6682be3766?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHBob25lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="phone">
+              </div>
+            </div>
+			      <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBob25lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="phone">
+              </div>
+            </div>
+			  <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://images.unsplash.com/photo-1616332012084-9ac36f0a7b3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHBob25lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="phone">
+              </div>
+            </div>
+			  <div class="gallery-item phone">
+              <div class="gallery-item-inner">
+                <img src="https://images.unsplash.com/photo-1587017234728-932c80f3e56f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBob25lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="phone">
+              </div>
+            </div>
+			
+
+      <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-12xO4l2QXGM/YS_DDwhwSYI/AAAAAAAACbI/OyLyIX89tnwmpwxcYoVED-x8uRWq56TawCNcBGAsYHQ/s0/camera-3.jpg" alt="camera">
+        </div>
+      </div>
+	  
+	  <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtZXJhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="camera">
+        </div>
+      </div>
+	  <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1495121553079-4c61bcce1894?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtZXJhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="camera">
+        </div>
+      </div>
+	  <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="camera">
+        </div>
+      </div>
+	  <div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1491796014055-e6835cdcd4c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="camera">
+        </div>
+      </div><div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1516724562728-afc824a36e84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="camera">
+        </div>
+      </div><div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1591681354784-c684e483dae0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="camera">
+        </div>
+      </div><div class="gallery-item camera">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1616088886430-ccd86fef0713?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhbWVyYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="camera">
+        </div>
+      </div>
+	  
+
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-rAOuebpUc6E/YS_C1gP9q2I/AAAAAAAACa4/emX-5ZEz-MUeUr11_iaj_BkEYbs-FH8kQCNcBGAsYHQ/s0/watch-1.jpg" alt="watch">
+        </div>
+      </div>
+
+      <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-sBZvlxLrXL8/YS_DDZdTaJI/AAAAAAAACbE/RKImX4fKJIs7NJV_SAj1bIGYjx1-acB8wCNcBGAsYHQ/s0/watch-2.jpg" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1618151444381-4ee6c3b2205a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1616928231359-fc8b7e244c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div> <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1530961915006-1cbd0d169f28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1628608569034-e214532ddfde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1618215650201-8d552591218d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1634394412850-b3a7571b334b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHdhdGNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	   <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1636081671112-04a4113ba1fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHdhdGNoJTIwM2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1557531365-e8b22d93dbd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d2F0Y2hlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  
+	  	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1577993944451-f8618a835822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  
+	  	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1548169874-53e85f753f1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=710&q=80" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  
+	  	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1557531365-e8b22d93dbd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  
+	  	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  
+	  	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  	  <!-- gallery item start -->
+      <div class="gallery-item watch">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2F0Y2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="watch">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1655635949352-4343460d9211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1883&q=80" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://plus.unsplash.com/premium_photo-1666899940579-6c931e34d52c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fDNkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1658279958267-ff43e14dea50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTY3fHwzZCUyMHJlbmRlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1647337844509-3da06f493872?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fDNkJTIwcmVuZGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1634487666187-bf3bf9002c1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fDNkJTIwcmVuZGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1634309708830-e7cd680c19a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fDNkJTIwcmVuZGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1637099536974-22c1d38eed51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fDNkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1633524411211-b682455441f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fDNkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1650954933593-6c9342ba0331?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTZ8fDNkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1634654422250-9f4526b8453c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTF8fDNkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item 3D">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1641520816036-441dfde0f79c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTR8fDNkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="3D">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1654573817889-296cad084c97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM4fHwzZCUyMHJlbmRlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1649091245850-71ad5a18e117?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA3fHwzZCUyMHJlbmRlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1649734926695-1b1664e98842?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTJ8fDNkJTIwcmVuZGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <!-- gallery item start -->
+      <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1649091247603-41855df8936d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fDNkJTIwcmVuZGVyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="data:image/jpeg;base64,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" alt="college">
+        </div>
+      </div>
+      <!-- gallery item end -->
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1660792729078-9d32e2dbe45a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGxvZ28lMjAzZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1652156748127-94d071ae35cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=862&q=80" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1657885428171-0e164036a1f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fDNkJTIwbG9nb3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1649180554466-0c15f6c70d51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fDNkJTIwbG9nb3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1650951478368-ecc858d151e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODF8fDNkJTIwbG9nb3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/SRUniversity.png" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1649180556628-9ba704115795?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg4fHxsb2dvJTIwM2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1650951472951-ee8c750b49cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTcwfHxsb2dvJTIwM2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1653389527532-884074ac1c65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTYyfHxsb2dvJTIwM2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1658497082000-b8c4d46addc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQwfHxsb2dvJTIwM2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM2fHxsb2dvJTIwM2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1660792709474-cc1e1e4c88ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHwzZCUyMGxvZ29zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1612810806546-ebbf22b53496?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA0fHxsb2dvJTIwM2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item logos">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1660792729078-9d32e2dbe45a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGxvZ28lMjAzZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="logos">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8834492/pexels-photo-8834492.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8834289/pexels-photo-8834289.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8834290/pexels-photo-8834290.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8834287/pexels-photo-8834287.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8833491/pexels-photo-8833491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hand">
+        </div>
+      </div>
+	  	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8833467/pexels-photo-8833467.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8833464/pexels-photo-8833464.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8833427/pexels-photo-8833427.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8832764/pexels-photo-8832764.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8832759/pexels-photo-8832759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hand">
+        </div>
+      </div>
+	  	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8832748/pexels-photo-8832748.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8832718/pexels-photo-8832718.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8831816/pexels-photo-8831816.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	 <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8831810/pexels-photo-8831810.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8830979/pexels-photo-8830979.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8830899/pexels-photo-8830899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8830874/pexels-photo-8830874.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item hand">
+        <div class="gallery-item-inner">
+          <img src="https://images.pexels.com/photos/8817541/pexels-photo-8817541.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hand">
+        </div>
+      </div>
+	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://assets.thehansindia.com/h-upload/2020/10/17/1006147-sr.webp" alt="college">
+        </div>
+      </div>
+	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGNvbGxlZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1519070994522-88c6b756330e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzR8fGNvbGxlZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1613324768553-5432d5e9f97d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fGNvbGxlZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1605299670824-00515e81b924?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fGNvbGxlZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://getmyuni.azureedge.net/college-image/big/sr-engineering-college-warangal.jpg" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://assets.thehansindia.com/h-upload/2020/10/17/1006147-sr.webp" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://cdn.stumagz.com/images/596e2389b8698coverpic" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  	  <div class="gallery-item college">
+        <div class="gallery-item-inner">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvbGxlZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="college">
+        </div>
+      </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+    </div>
+  </div>
+</section>
+<script>
+ const filterContainer = document.querySelector(".gallery-filter"),
+ galleryItems = document.querySelectorAll(".gallery-item");
+
+ filterContainer.addEventListener("click", (event) =>{
+   if(event.target.classList.contains("filter-item")){
+     // deactivate existing active 'filter-item'
+     filterContainer.querySelector(".active").classList.remove("active");
+     // activate new 'filter-item'
+     event.target.classList.add("active");
+     const filterValue = event.target.getAttribute("data-filter");
+     galleryItems.forEach((item) =>{
+       if(item.classList.contains(filterValue) || filterValue === 'all'){
+        item.classList.remove("hide");
+         item.classList.add("show");
+       }
+       else{
+        item.classList.remove("show");
+        item.classList.add("hide");
+       }
+     });
+   }
+ });
+</script>
+</body>
+</html>
